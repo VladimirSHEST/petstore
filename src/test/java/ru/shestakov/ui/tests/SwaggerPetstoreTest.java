@@ -28,7 +28,7 @@ public class SwaggerPetstoreTest extends BaseTest {
     @DisplayName("Проверка открытия и закрытия секций (листов)")
     public void checkOpenAndCloseTegTest() {
         step("Закрытие листа 'store'", () -> {
-            swaggerMainPage.listStore().click();
+            swaggerMainPage.listStore().scrollIntoView("{block: 'center'}").click();
             swaggerMainPage.blockGetInStore().shouldNotBe(Condition.visible);
         });
         step("Открытие листа 'store'", () -> {
@@ -37,7 +37,7 @@ public class SwaggerPetstoreTest extends BaseTest {
         });
 
         step("Закрытие листа 'pet'", () -> {
-            swaggerMainPage.listPet().click();
+            swaggerMainPage.listPet().scrollIntoView("{block: 'center'}").click();
             swaggerMainPage.blockGetInPet().shouldNotBe(Condition.visible);
         });
         step("Открытие листа 'pet'", () -> {
@@ -46,7 +46,7 @@ public class SwaggerPetstoreTest extends BaseTest {
         });
 
         step("Закрытие листа 'user'", () -> {
-            swaggerMainPage.listUser().click();
+            swaggerMainPage.listUser().scrollIntoView("{block: 'center'}").click();
             swaggerMainPage.blockGetInUser().shouldNotBe(Condition.visible);
         });
         step("Открытие листа 'user'", () -> {
@@ -59,7 +59,7 @@ public class SwaggerPetstoreTest extends BaseTest {
     @DisplayName("Проверяем Deprecated отображение в ручке pet/findPetsByStatus")
     public void checkVisibleDeprecatedTest() {
         step("Проверка отображения Deprecated", () -> {
-            swaggerMainPage.listPetMethodDeprecated().click();
+            swaggerMainPage.listPetMethodDeprecated().scrollIntoView("{block: 'center'}").click();
             swaggerMainPage.deprecatedMethodGet().shouldBe(Condition.visible);
         });
     }
