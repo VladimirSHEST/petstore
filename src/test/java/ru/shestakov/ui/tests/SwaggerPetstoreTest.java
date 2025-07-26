@@ -71,7 +71,6 @@ public class SwaggerPetstoreTest extends BaseTest {
                     forEach(element ->element.shouldHave(cssValue("background-color",
                             "rgba(249, 62, 62, 1)")));
     }
-
 }
 
 

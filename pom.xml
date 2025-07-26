@@ -22,7 +22,7 @@
         <lombok.version>1.18.28</lombok.version>
     </properties>
 
-    <dependencies>
+        <dependencies>
         <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
